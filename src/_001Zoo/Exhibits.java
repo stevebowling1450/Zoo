@@ -9,7 +9,6 @@ public enum Exhibits {
     BEAR("Bear Cave"),
     SNAKE("Reptile House");
 
-
     String location;
 
     Exhibits(String location){

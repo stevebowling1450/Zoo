@@ -6,11 +6,6 @@ import java.util.Scanner;
  * Created by stevebowling on 10/13/16.
  */
 public class Animal extends Zoo {
-
-
-
-
-
     public Animal(String n, int a, String g) {
         super(n, a, g);
                         }
@@ -29,10 +24,5 @@ public class Animal extends Zoo {
             case 3: Snake.animalinfo();
                 break;
         }
-
     }
-
-
-
-
 }

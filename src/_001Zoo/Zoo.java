@@ -22,8 +22,6 @@ public class Zoo {
         System.out.println(people.get(i));
     }
 
-
-
   static  public int age;
    static public String name;
   static  public String gender;

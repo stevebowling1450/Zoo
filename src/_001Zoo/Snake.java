@@ -25,7 +25,6 @@ public class Snake extends Animal {
         Exhibits newSign = Exhibits.valueOf("snake".toUpperCase());
         place=newSign.getLocation();
 
-
         anim.add("Animal Specie : SNAKE "+"\n"+"Name: " + name + "\n"
                 + "Age: " + age + "\n" +
                 "Gender: " + gender + "\n" +

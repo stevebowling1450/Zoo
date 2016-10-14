@@ -29,8 +29,6 @@ public class Visitor extends People{
             case 3: Zoo.viewVisitor();
                 break;
         }Menu.menu();
-
-
     }
 
     public static void visitorinfo() {
@@ -48,7 +46,6 @@ public class Visitor extends People{
         zip = sc.nextInt();
         System.out.println("What is your Visitor Pass Number?");
         vPass = sc.nextInt();
-
 
         visitor.add("Name: " + name + "\n"
                 + "Age" + age + "\n" +

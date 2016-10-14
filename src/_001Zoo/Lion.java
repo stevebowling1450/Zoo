@@ -12,10 +12,7 @@ public class Lion extends Animal{
 
     static String place;
 
-
-
     public static void animalinfo() {
-
 
         Scanner sc = new Scanner(System.in);
         System.out.println("What is the animal's name?");
@@ -26,10 +23,6 @@ public class Lion extends Animal{
         age = sc.nextInt();
         Exhibits newSign = Exhibits.valueOf("lion".toUpperCase());
         place=newSign.getLocation();
-
-        //Animal a1 = new Animal(name, age, gender, exhibit);
-        //System.out.println("ANIMAL INFO:");
-        //System.out.println(a1.displayInfo());
 
         anim.add("Animal Specie : LION "+"\n"+"Name: " + name + "\n"
                 + "Age: " + age + "\n" +
