@@ -21,14 +21,15 @@ public class Visitor extends People{
         System.out.println("What do you want to do: \n 1 Enter your Visitor  Info. \n" +
                 " 2 to View list of animals. \n 3 to View a list of Visitor.");
         donx=sc.nextInt();
-        if (donx==1){
-            visitorinfo();
-        }else if (donx==2){
-            Zoo.viewAnimals();
-        }else if (donx==3){
-            Zoo.viewVisitor();
-
+        switch (donx){
+            case 1: visitorinfo();
+                break;
+            case 2: Zoo.viewAnimals();
+                break;
+            case 3: Zoo.viewVisitor();
+                break;
         }Menu.menu();
+
 
     }
 
@@ -49,9 +50,6 @@ public class Visitor extends People{
         vPass = sc.nextInt();
 
 
-
-        Visitor v1 = new Visitor(name, age, gender, phone, zip, vPass);
-        //System.out.println( e1.displayInfo());
         visitor.add("Name: " + name + "\n"
                 + "Age" + age + "\n" +
                 "Gender: " + gender + "\n" +

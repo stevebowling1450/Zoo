@@ -8,53 +8,31 @@ import java.util.Scanner;
 public class Animal extends Zoo {
 
 
-    static String exhibit;
-    static String species;
 
-    public Animal(String n, int a, String g, String e, String s) {
+
+
+    public Animal(String n, int a, String g) {
         super(n, a, g);
-        exhibit = e;
-        species = s;
-    }
+                        }
 
-
-    public static void animalinfo() {
-
+    public static void specie(){
+        int type;
         Scanner sc = new Scanner(System.in);
-        System.out.println("What is the animal's name?");
-        name = sc.nextLine();
-        System.out.println("What is the animal's gender?");
-        gender = sc.nextLine();
-        System.out.println("What Exhibit is this animal in?");
-        exhibit = sc.nextLine();
-        System.out.println("What specie is this animal?");
-        species = sc.nextLine();
-        System.out.println("What is the animal's age?");
-        age = sc.nextInt();
-        Menu.menu();
+        System.out.println("Which Species of animal are you entering? \n 1. Lion \n 2. Bear \n 3. Snake ");
+        type=sc.nextInt();
 
-        Animal a1 = new Animal(name, age, gender, exhibit, species);
-        //System.out.println("ANIMAL INFO:");
-        //System.out.println(a1.displayInfo());
-
-        anim.add("Name: " + name + "\n"
-                + "Age" + age + "\n" +
-                "Gender: " + gender + "\n" +
-                "Species:" + species +
-                "\n" + "Exhibit " + exhibit+ "\n");
-
-
+        switch (type){
+            case 1: Lion.animalinfo();
+                break;
+            case 2: Bear.animalinfo();
+                break;
+            case 3: Snake.animalinfo();
+                break;
+        }
 
     }
 
 
-    public String displayInfo() {
-        return "Name: " + name + "\n"
-                + "Age" + age + "\n" +
-                "Gender: " + gender + "\n" +
-                "Species:" + species +
-                "\n" + "Exhibit " + exhibit;
 
 
-    }
 }

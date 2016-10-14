@@ -10,11 +10,16 @@ public class Zoo {
     static ArrayList<String> people= new ArrayList<>();
   static ArrayList<String> anim= new ArrayList<>();
     public static void viewAnimals(){
-        System.out.println(anim);}
+        for (int i = 0; i < anim.size(); i++)
+        System.out.println(anim.get(i));}
+
     public static void viewVisitor(){
-        System.out.println(visitor);}
+        for (int i = 0; i < visitor.size(); i++)
+        System.out.println(visitor.get(i));}
+
     public static void viewEmployee(){
-        System.out.println(people);
+        for (int i = 0; i < people.size(); i++)
+        System.out.println(people.get(i));
     }
 
 
@@ -42,9 +47,4 @@ public class Zoo {
         return age;
     }
 
-    public String displayInfo() {
-        return " Name: " + name + "\n"
-                + " Age" + age + "\n" +
-                " Gender: " + gender + "\n";
-    }
 }
