@@ -1,7 +1,6 @@
 package _001Zoo;
-
+import java.util.InputMismatchException;
 import java.util.Scanner;
-
 /**
  * Created by stevebowling on 10/13/16.
  */
@@ -17,26 +16,42 @@ public class Employee extends People{
 
     public static void employee(){
         int donx;
-        Scanner sc= new Scanner(System.in);
-        System.out.println("What do you want to do: \n 1 Enter employee Info. \n 2 Enter animal Info. \n" +
-                " 3 Enter Visitor Info. \n 4 to View list of animals. \n 5 to View a list of Employees.\n " +
-                "6 View Visitor Info.");
-        donx=sc.nextInt();
+        try {
+            Scanner sc = new Scanner(System.in);
+            System.out.println("What do you want to do: \n 1 Enter employee Info. \n 2 Enter animal Info. \n" +
+                    " 3 Enter Visitor Info. \n 4 to View list of animals. \n 5 to View a list of Employees.\n " +
+                    "6 View Visitor Info.");
+            donx = sc.nextInt();
 
-        switch (donx){
-            case 1: employeeinfo();
-                break;
-            case 2: Animal.specie();
-                break;
-            case 3: Visitor.visitorinfo();
-                break;
-            case 4: Zoo.viewAnimals();
-                break;
-            case 5: Zoo.viewEmployee();
-                break;
-            case 6: Zoo.viewVisitor();
-                break;
-        }Menu.menu();
+            switch (donx) {
+                case 1:
+                    employeeinfo();
+                    break;
+                case 2:
+                    Animal.specie();
+                    break;
+                case 3:
+                    Visitor.visitorinfo();
+                    break;
+                case 4:
+                    Zoo.viewAnimals();
+                    break;
+                case 5:
+                    Zoo.viewEmployee();
+                    break;
+                case 6:
+                    Zoo.viewVisitor();
+                    break;
+                default:
+                    System.out.println("Please enter a number from 1 to 6");
+                    employee();
+                    break;
+            }
+            Menu.menu();
+        }catch (InputMismatchException ime) {
+            System.out.println("Please enter a number 1 to 6");
+            employee();
+        }
     }
 
     public static void employeeinfo() {
